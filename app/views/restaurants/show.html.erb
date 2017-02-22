@@ -1,18 +1,26 @@
 <div class="container">
 
-<h2><%= @restaurant.name %></h2>
-<ul>
-  <li> <%= @restaurant.address %> </li>
-  <li> <%= @restaurant.phone_number %> </li>
-  <li> <%= @restaurant.category %> </li>
-</ul>
-<h3>Reviews:</h3>
-<ul>
-  <% @restaurant.reviews.each do |review| %>
-  <li><%= review.rating %> - <%= review.content %></li>
-  <% end %>
-</ul>
+  <h2><%= @restaurant.name %></h2>
+  <ul>
+    <li> <%= @restaurant.address %> </li>
+    <li> <%= @restaurant.phone_number %> </li>
+    <li> <%= @restaurant.category %> </li>
+  </ul>
+  <h3>Reviews:</h3>
+  <ul>
+    <% @restaurant.reviews.each do |review| %>
+    <li><%= review.rating %> - <%= review.content %></li>
+    <% end %>
+  </ul>
 
-<%= link_to "Add a review", new_restaurant_review_path(@restaurant) %>
+  <h2>Create a new review :</h2>
 
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6 col-xs-offset-3">
+        <%= render 'reviews/form' %>
+      </div>
+    </div>
+
+  </div>
 </div>

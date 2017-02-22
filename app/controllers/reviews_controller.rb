@@ -1,9 +1,9 @@
 class ReviewsController < ApplicationController
   before_action :set_restaurant
 
-  def new
-    @review = Review.new
-  end
+  # def new
+  #   @review = Review.new
+  # end
 
   def create
     # je dois récupérer le resto en recup le rest id dans l'url, je build un nv resto
@@ -12,7 +12,7 @@ class ReviewsController < ApplicationController
     if @review.save
       redirect_to restaurant_path(@restaurant)
     else
-      render :new
+      render :show
     end
   end
 
