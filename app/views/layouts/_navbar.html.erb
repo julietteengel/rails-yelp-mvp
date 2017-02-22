@@ -1,15 +1,17 @@
-  <nav class="navbar navbar-wagon">
+  <nav class="navbar navbar-fixed-top navbar-wagon">
 <!--     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    </button> -->
-    <div class="collapse navbar-collapse navbar-wagon-right" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
+</button> -->
+<div class="container">
+  <div class="collapse navbar-collapse navbar-wagon-right" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+<ol class="breadcrumb">
 
+      <li><a class="nav-wagon-item navbar-wagon-link" > <%= link_to "All Rest", restaurants_path(@restaurant) %> </a> </li>
 
-        <a class="nav-wagon-item navbar-wagon-link" > <%= link_to "All Rest", restaurants_path(@restaurant) %> </a>
+      <li><a class="nav-wagon-item navbar-wagon-link"> <%= link_to "Add a rest", new_restaurant_path(@restaurant) %> </a></li>
+</ol>
 
-        <a class="nav-wagon-item navbar-wagon-link"> <%= link_to "Add a rest", new_restaurant_path(@restaurant) %> </a>
-
-
-      </div>
     </div>
-  </nav>
+  </div>
+</div>
+</nav>

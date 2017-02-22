@@ -1,7 +1,8 @@
+<div class="container">
 <h1>Restaurants :</h1>
 
-<table>
-  <thead>
+<table class="table table-striped table-bordered">
+  <thead class="thead-inverse">
     <tr>
       <th>Name</th>
       <th>Address</th>
@@ -23,5 +24,7 @@
     <% end %>
   </tbody>
 </table>
+</div>
 
 <%= link_to "Add a restaurant", new_restaurant_path %>
+
